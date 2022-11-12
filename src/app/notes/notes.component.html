@@ -1,5 +1,16 @@
 <div>
-  <div class="row">
-    <button type="button">Add Notes</button>
+  <div ngClass="row">
+    <div *ngFor="let note of note">
+      <div ngClass="card">
+        <div ngClass="header">
+          <h3>{{ note.noteLable }}</h3>
+        </div>
+
+        <div ngClass="container">
+          <p>{{ note.noteDescriptiom }}</p>
+        </div>
+      </div>
+    </div>
+    <div ngClass="card"> <p (click)="addNote()">add note</p></div>
   </div>
 </div>
